@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Card } from "../card/card"
 import styles from './cardList.module.scss';
 import { Loader } from "../loader";
+import { ErrorModal } from "../errorModal";
 
 interface Props {
   articles: Article[];
@@ -23,7 +24,7 @@ export const CardList: React.FC<Props> = ({ articles, value }) => {
     <>
       {isLoading && <Loader />}
 
-      {/* {isError && <p>Something went wrong</p>} */}
+      {isError && <ErrorModal />}
 
       <div className={styles.cardlist}>
         {articles.map(article => (

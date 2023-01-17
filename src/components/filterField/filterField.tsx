@@ -11,10 +11,9 @@ interface Props {
 
 export const FilterField: React.FC<Props> = ({ result, onChange, value }) => {
   return (
-    <Container component={"header"} classes={{ root: styles.wrapper }}>
+    <Container classes={{ root: styles.wrapper }} disableGutters maxWidth={false}>
       <Typography align="left">Filter by keywords</Typography>
       <TextField
-        classes={{ root: styles.field }}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -25,7 +24,7 @@ export const FilterField: React.FC<Props> = ({ result, onChange, value }) => {
           onChange: onChange,
           value: value
         }}
-        sx={{ minWidth: 1 / 3, marginBottom: 2, marginTop: 1, boxShadow: 2 }}
+        sx={{ minWidth: 1 / 3, marginBottom: 5, marginTop: 1, boxShadow: 2 }}
       />
 
       <Typography align="left">Result: {result ? result : 0}</Typography>

@@ -6,31 +6,37 @@ import styles from './homePage.module.scss'
 import { Article } from "@/types/article";
 
 export const HomePage = () => {
-  const [value, setValue] = useState<string>('');
+  const [query, setQuery] = useState<string>('');
   const { articles } = useAppSelector(state => state.articlesReducer)
 
   const onChangeHandler = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(event.target.value.trimStart());
+      setQuery(event.target.value.trimStart());
     },
-    []
-  );
+    []);
 
-  const filterdText = (text: string, values: string) => {
-    return text.toLowerCase().includes(values.toLowerCase());
-  };
+  const getVisibleArticles = (articles: Article[], query: string) => {
+    const filteredByTitle = articles
+      .filter(article => article.title.toLowerCase().includes(query.toLowerCase()));
 
-  let result = 10;
+    const filteredBySummary = articles
+      .filter(article => article.summary.toLowerCase().includes(query.toLowerCase()));
+
+    return Array.from(new Set((filteredByTitle.concat(filteredBySummary))))
+  }
+
+
+  const visibleArticles = getVisibleArticles(articles, query);
 
   return (
     <div className={styles.homepage}>
       <div className={styles.container}>
         <FilterField
-          value={value}
+          value={query}
           onChange={onChangeHandler}
-          result={result}
+          result={visibleArticles.length}
         />
-        <CardList articles={articles} value={value} />
+        <CardList articles={visibleArticles} value={query} />
       </div>
     </div>
   );
