@@ -1,0 +1,8 @@
+@import '../../styles/main.scss';
+
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1290px;
+  gap: 45px;
+}
