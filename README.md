@@ -11,7 +11,7 @@ Parts of application:
 - [Demo link](https://Alzay007.github.io/-Codebridge/)
 - [Design](https://www.figma.com/file/h1veXmuEt84sT7PEZgF42K/Frontend_test?node-id=0%3A1&t=TW6rUR4fiImmCNXv-0)
 
-Technologies used:
+## Technologies used:
 
 - React
 - React Router
