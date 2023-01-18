@@ -21,6 +21,7 @@ export const articlesSlice = createSlice({
   reducers: {
     articlesFetching(state) {
       state.isLoading = true;
+      state.article = null;
     },
     articlesFetchingSuccess(state, action: PayloadAction<Article[]>) {
       state.isLoading = false;

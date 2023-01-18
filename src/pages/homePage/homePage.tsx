@@ -4,6 +4,7 @@ import { FilterField } from "../../components/filterField";
 import { useCallback, useState } from "react";
 import styles from './homePage.module.scss'
 import { Article } from "@/types/article";
+import { slicedText } from "../../helpers/sliceText";
 
 export const HomePage = () => {
   const [query, setQuery] = useState<string>('');
@@ -20,7 +21,7 @@ export const HomePage = () => {
       .filter(article => article.title.toLowerCase().includes(query.toLowerCase()));
 
     const filteredBySummary = articles
-      .filter(article => article.summary.toLowerCase().includes(query.toLowerCase()));
+      .filter(article => slicedText(article.summary).toLowerCase().includes(query.toLowerCase()));
 
     return Array.from(new Set((filteredByTitle.concat(filteredBySummary))))
   }
