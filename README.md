@@ -8,7 +8,7 @@ Parts of application:
   2. ArticlePage with detail information about article.
 
 
-- [Demo link](https://Alzay007.github.io/-Codebridge/)
+- [Demo link](https://admirable-panda-734df9.netlify.app/)
 - [Design](https://www.figma.com/file/h1veXmuEt84sT7PEZgF42K/Frontend_test?node-id=0%3A1&t=TW6rUR4fiImmCNXv-0)
 
 ## Technologies used:
