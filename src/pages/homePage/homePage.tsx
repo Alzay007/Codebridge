@@ -13,8 +13,7 @@ export const HomePage = () => {
   const onChangeHandler = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setQuery(event.target.value.trimStart());
-    },
-    []);
+    }, []);
 
   const getVisibleArticles = (articles: Article[], query: string) => {
     const filteredByTitle = articles
@@ -23,9 +22,8 @@ export const HomePage = () => {
     const filteredBySummary = articles
       .filter(article => slicedText(article.summary).toLowerCase().includes(query.toLowerCase()));
 
-    return Array.from(new Set((filteredByTitle.concat(filteredBySummary))))
+    return Array.from(new Set((filteredByTitle.concat(filteredBySummary))));
   }
-
 
   const visibleArticles = getVisibleArticles(articles, query);
 
