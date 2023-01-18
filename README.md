@@ -1,15 +1,22 @@
-# Getting Started with Create React App
+# Codebridge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Parts of application: 
+  1. HomePage with list of articles from public api https://spaceflightnewsapi.net/ :
+    - a. Cards with article titles and descriptions for 100 characters. The user can click on the card to go to an article page that contains the title and full description of the selected article;
+    - b. A field to filter by keyword. The user enters keywords into the field and the system displays all articles containing at least one of the keywords in the name or/and description;
 
-## Available Scripts
+  2. ArticlePage with detail information about article.
 
-In the project directory, you can run:
 
-### `npm start`
+- [Demo link](https://Alzay007.github.io/-Codebridge/)
+- [Design](https://www.figma.com/file/h1veXmuEt84sT7PEZgF42K/Frontend_test?node-id=0%3A1&t=TW6rUR4fiImmCNXv-0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technologies used:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router
+- Typescript
+- Redux
+- Redux Toolkit
+- Material UI
+- SCSS
