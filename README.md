@@ -25,7 +25,7 @@ Parts of application:
 
 ## 1. Clone this project:
 
-### `git@github.com:Alzay007/-Codebridge.git`
+### `git@github.com:Alzay007/Codebridge.git`
 
 ## 2. Install the packages with the command:
 
